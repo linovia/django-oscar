@@ -242,7 +242,7 @@ INSTALLED_APPS = [
     # Oscar extensions
     'stores',
     'paypal',
-    'datacash',
+    'apps.stripe',
     # External apps
     'django_extensions',
     'debug_toolbar',
@@ -327,17 +327,17 @@ new_nav.append(
             },
         ]
     })
-new_nav.append(
-    {
-        'label': 'Datacash',
-        'icon': 'icon-globe',
-        'children': [
-            {
-                'label': 'Transactions',
-                'url_name': 'datacash-transaction-list',
-            },
-        ]
-    })
+# new_nav.append(
+#     {
+#         'label': 'Datacash',
+#         'icon': 'icon-globe',
+#         'children': [
+#             {
+#                 'label': 'Transactions',
+#                 'url_name': 'datacash-transaction-list',
+#             },
+#         ]
+#     })
 OSCAR_DASHBOARD_NAVIGATION = new_nav
 
 GEOIP_PATH = os.path.join(os.path.dirname(__file__), 'geoip')
